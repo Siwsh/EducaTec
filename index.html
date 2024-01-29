@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .arc-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .arc {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 200%;
+            background-color: #f7f1c4;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .arce {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 200%;
+            background-color: #f7f1c4;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+
+        .text-container {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .col-1,
+        .col-1.center,
+        .col-1.right {
+            width: 30%;
+            text-align: left;
+            margin: 0;
+            top: 1%;
+        }
+
+        .col-1.center {
+            text-align: center;
+        }
+
+        .col-1.right {
+            text-align: right;
+        }
+
+        .texte-container {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .col-2 {
+            width: 100%;
+            text-align: left;
+            margin: 0;
+            top: 1%;
+            font-size: 70px;
+            color: #E29028;
+        }
+
+        .col-2.center {
+            text-align: center;
+            width: 90%;
+        }
+
+        .col-2.right {
+            text-align: right;
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 30%;
+            left: 13%;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 900px;
+        }
+
+        .bn732-hover {
+            width: 160px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            margin: 22px;
+            height: 55px;
+            text-align:center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 15px;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .bn732-hover:hover {
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .bn732-hover:focus {
+            outline: none;
+        }
+
+        .bn732-hover.bn21 {
+            background-image: linear-gradient(
+            to right,
+            #fdd349,
+            #ff9a44,
+            #ef9d43,
+            #e75516
+        );
+            box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+        }
+
+        .img {
+            width: auto;
+            max-width: 310px;
+            height: auto;
+            margin-bottom: 50px;
+            left: 10%;
+        }
+
+        /* Estilos para a segunda página */
+        .segundapagina {
+            text-align: left;
+            padding: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .segundapagina h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .imagem-segunda-pagina {
+            width: 100%;
+            max-width: 1000%;
+            height: auto;
+            margin-top: 81px;
+            margin-right: 110px;
+        }
+
+        .texto-segunda-pagina {
+            width: 110%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .titulosegundapagina{
+            width: 110%;
+            text-align: center;
+            margin-top: 30px;
+            color: #E29028;
+        }
+
+        .segundapagina p {
+            font-size: 33px;  
+            line-height: 1.5;
+        }
+
+        /* Estilos para a terceira página */
+        .terceirapagina {
+            text-align: center;
+            padding: 5px;
+            width: 99.5%;
+            background-image: url('https://github.com/HerickHannier/EducaTec/blob/main/Captura%20de%20tela%202024-01-25%20153546.png?raw=true'); /* Substitua a URL pela imagem desejada */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .terceirapagina h2 {
+            color: #fff;
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .terceirapagina p {
+            color: #fff;
+            font-size: 40px;
+            line-height: 1.5;
+        }
+
+        .quartapagina {
+            text-align: left;
+            padding: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        /* Estilos para a quarta página */
+        .quartapagina h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .imagem-quarta-pagina {
+            width: 100%;
+            max-width: 1000%;
+            height: auto;
+            margin-top: 85px;
+            margin-left: 150px;
+        }
+
+        .texto-quarta-pagina {
+            width: 110%;
+            text-align: left;
+            margin-top: 30px;
+           
+        }
+        .titulosquartapagina{
+            width: 110%;
+            text-align: center;
+            margin-top: 30px;
+            color: #E29028;
+        }
+
+        .quartapagina p {
+            font-size: 33px;  
+            line-height: 1.5;
+            margin-left: 125px;
+        }
+
+        /* Estilos do luzin página */
+        .Cadastro{
+            background-color: #0fc76e;
+            border-radius: 16px;
+            width:922px;
+            height:530px;
+            margin: 0 auto;
+            margin-top: -7%;
+        }
+        .content_1 {
+            margin: 15px;
+            padding: 22px;
+            padding-top: 15%;
+            width: 40%;
+            height: 80%;
+            float: left;
+        }
+        .content_2 {
+            margin: -19px;
+            margin-left: 50px;
+            padding: 0px;
+            padding-top: 4%;
+            width: 44%;
+            height: 93%;
+            float: left;
+        }
+        input {
+            border-radius: 40px;
+            height: 48px;
+            border: none;
+            width: 100%;
+            text-align: center;
+            color: black;
+        }
+        .botao {
+            background: #F4B700;
+            border-radius: 48px;
+            padding: 16px;
+            display: block;
+            border: none;
+            width: 100%;
+        }
+        text_login{
+            float: right;
+        }
+        .clear {
+            clear: both;
+
+        }
+        .cada{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 29px;
+            margin-right: 40px;
+        }
+        hr{
+            border: 3px solid black;
+            width: 97%;
+            align-items: center;
+            margin: 3px;
+            margin-right: -63px;
+            margin-left: -9px;
+        }
+        .titulo {
+            margin: 24px;
+            margin-left: -42px;
+            margin-top: 61px;
+            margin-bottom: -3px;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 50px;
+            margin: 24px;
+        }
+        .gg{
+            border-radius: 20em;
+            
+        }
+        .bn632-hover {
+            width: 100%;
+            color: black;
+            cursor: pointer;
+            height: 48px;
+            margin: 0px;
+            text-align:center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 48px;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+        
+        .bn632-hover:hover {
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+        
+        .bn632-hover:focus {
+            outline: none;
+        }
+        
+        .bn632-hover.bn19 {
+            background-image: linear-gradient(
+            to right,
+            #f5ce62,
+            #e43603,
+            #fa7199,
+            #e85a19
+            );
+            box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+        }
+
+        .pagina_5{
+            background-color: #68BED6;
+            width: 89.4%;
+            margin: 0;
+            padding: 100px;
+        }
+        /*Titulo*/
+        .topo {
+            text-align: center;
+            color: black;
+            font-size: 35px;
+            padding-top: 12px;
+            margin-top: 5px;
+        }
+        /*3 quadros*/
+        .quadro {
+            display: flex;
+            flex-direction: row;
+            margin: 113px;
+            margin-left: 233px;
+        }
+        .bloco1 {
+            background-color: white;
+            margin-bottom: 0%;
+            border-color: black;
+            border-radius: 16px;
+            width:400px;
+            height:460px;
+        }
+        .bloco2 {
+            background-color: white;
+            margin-bottom: 0%;
+            border-radius: 16px;
+            width:400px;
+            height:460px;
+        }
+        .bloco3 {
+            background-color: white;
+            margin-bottom: 0%;
+            border-radius: 16px;
+            width:400px;
+            height:460px;
+        }
+        .espaco {
+            margin: 50px
+        }
+        /*fim dos quadros*/
+        .imagem-quinta-pagina {
+            width: auto;
+            height: auto;
+            padding-left: 40px;
+            padding-top: 17px;
+        }
+
+        .imagem-quinta-pagina-meio {
+            width: auto;
+            height: auto;
+            padding-left: 45px;
+            padding-top: 17px;
+        }
+        .letra {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            margin-top: 13px; /*para deixar a letra perto da imagem*/
+             
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <!-- Primeira Página -->
+    <div class="arc-container">
+        <div class="arc"></div>
+        <div class="text-container">
+            <div class="col-1">
+                <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-25_134646416.png?raw=true" class="img">
+            </div>
+            <div class="col-1 center">
+                
+            </div>
+            <div class="col-1 right">
+                
+            </div>
+        </div>
+        <div class="texte-container">
+            <div class="col-2">
+                <p>Educando e<br>Conscientizando<br>Gerações!</p>
+            </div>
+            <div class="col-2 center">
+                
+            </div>
+            <div class="col-2 right">
+                <img src="C:\Users\965155\Pictures\Screenshots\incru.png" width="780px" height="auto"> 
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="/"><button class="bn732-hover bn21"></button></a>
+        </div>
+    </div>
+
+    <!-- Segunda Página -->
+    <div class="segundapagina">
+        <div class="imagem-segunda-pagina">
+            <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_155217249.png?raw=true" alt="Imagem Segunda Página" width="495" height="493">
+        </div>
+        <div class="texto-segunda-pagina">
+            <h2 class="titulosegundapagina">Sobre Nós</h2>
+            <p>Nos últimos anos, a tecnologia tem<br> desempenhado um papel<br> fundamental na transformação da<br> educação, tornando-a mais<br> inclusiva e acessível. O EducaTec é<br> um site inovador que lidera essa<br> mudança, redefinindo a experiência<br> educacional nas instituições<br> escolares.</p>
+        </div>
+    </div>
+
+    <!-- Terceira Página -->
+    <div class="terceirapagina">
+        <h2>Inovação</h2>
+        <p>O Educatec utiliza de suas ferramentas inovadoras,<br> com o proposito de mudar o ambiente escolar,<br> capacitando que alunos, educadores e funcionários<br> possam construir um ambiente escolar<br> verdadeiramente inclusivo.</p>
+    </div>
+
+    <!-- Quarta Página -->
+    <div class="quartapagina">
+        <div class="texto-quarta-pagina">
+            <h2 class="titulosquartapagina">Qual o nosso  propósito?</h2>
+            <p>O EducaTec capacita os alunos a criar roteiros personalizados para navegar pela escola, garantindo que eles possam explorar o ambiente com confiança. A comunidade e o fórum integrados permitem a troca de experiências e a construção de redes de apoio, promovendo o aprendizado colaborativo.</p>
+        </div>
+        <div>
+
+        </div>
+        <div class="imagem-quarta-pagina">
+            <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-25_131715912.png?raw=true" alt="Imagem Segunda Página" width="600" height="500">
+        </div>
+    </div>
+
+<!--inicio pagina 5-->
+<div class="pagina_5">
+    <div class="topo">
+        <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_140208047.png?raw=true" class="topo">
+    </div>
+       <div class="quadro">
+            <div class="bloco1">
+                <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_132604639.png?raw=true" class="imagem-quinta-pagina">
+                <p class="letra">Permita que os<br> usuários marquem<br> áreas da escola com<br> informações sobre<br> acessibilidade, como<br> rampas, elevadores,<br> banheiros acessíveis<br> e áreas de descanso.</p>
+            </div>
+            <div class="espaco"></div>
+            <div class="bloco2">
+                <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_133644243.png?raw=true" class="imagem-quinta-pagina-meio">
+                <p class="letra">Integre um calendário com eventos, aulas,<br> palestras e<br> atividades relacionadas à<br> inclusão e<br> acessibilidade na<br> escola.</p>
+            </div>
+            <div class="espaco"></div>
+            <div class="bloco3">
+                <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_133431397.png?raw=true" class="imagem-quinta-pagina">
+                <p class="letra">Disponibilize<br> materiais e recursos<br> educacionais<br> específicos para<br> cada tipo de<br> deficiência, incluindo<br> vídeos, documentos<br> é links úteis.</p>
+                <br><br>
+            </div>
+       </div>
+    </div>    
+<!--fim pagina 5-->
+
+    <!-- Sexta Página -->
+    <div class="Cadastro">
+        <div class="content_1">
+            <form>
+                    <input type="text" id="Nome" placeholder="Nome"><br>
+
+                    <br><input type="email" id="Email" placeholder="Email"><br>
+
+                    <br><button type="submit" class="bn632-hover bn19">Confirmar</button>
+            </form>
+        </div>
+        <div class="content_2">
+            <img class="titulo" src="https://github.com/HerickHannier/EducaTec/blob/main/letra_cadastro.png?raw=true"><br>
+            <hr>
+            <p class="cada">Inscreva-se agora para<br> receber as ultimas<br> novidades e atualizações<br> sobre o trabalho da<br> EducaTec!</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>
