@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\965155\Downloads\EducaTec-removebg-preview.png" type="image/x-icon">
+    <title>EducaTec</title>
     <style>
         body {
             margin: 0;
@@ -163,7 +165,7 @@
         .segundapagina h2 {
             font-size: 50px;
             margin-bottom: 20px;
-            margin-left: -55px;
+            margin-left: -194px;
         }
 
         .imagem-segunda-pagina {
@@ -184,7 +186,7 @@
             text-align: center;
             margin-top: 30px;
             color: #E29028;
-            margin-right: 10%;
+            margin-right: 8%;
         }
 
         .segundapagina p {
@@ -290,7 +292,7 @@
             border: none;
             width: 100%;
             text-align: center;
-            color: black;
+            color: rgb(0, 0, 0);
         }
         .botao {
             background: #F4B700;
@@ -407,6 +409,7 @@
             width:360px;
             height:460px;
             border: 2px solid #000000;
+            animation: intro 1.5s
         }
         .bloco2 {
             background-color: white;
@@ -415,6 +418,8 @@
             width:345px;
             height:460px;
             border: 2px solid #000000;
+            animation: 
+                exemplo 1.5s infinite;
         }
         .bloco3 {
             background-color: white;
@@ -423,6 +428,8 @@
             width:370px;
             height:460px;
             border: 2px solid #000000;
+            animation: 
+                exemplo 1.5s infinite ;
         }
         .espaco {
             margin: 50px
@@ -480,6 +487,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            
         }
         hr{
             border: 1px solid rgb(180, 175, 175);
@@ -487,6 +495,8 @@
         }
         .copy{
             margin-top: 2%;
+            background-color: #f7f1c4;
+            height: 3%;
         }
         .total{
             padding: 100%;
@@ -495,9 +505,29 @@
             display:contents;
 
         }
-        
-        
+        .bloco1:hover{
+            transform: perspective(0px) translateY(-10%) scale(100%) translateZ(0);
+        }
+        .bloco2:hover{
+            transform: perspective(0px) translateY(-10%) scale(100%) translateZ(0); 
+        }
+        .bloco3:hover{
+            transform: perspective(0px) translateY(-10%) scale(100%) translateZ(0);
+        }
+        .bloco1:hover{
+            transform: translate3d(0%,-10%,0);
+            transition: all 0.5;
+        }
+        .bloco2:hover{
+            transform: translate3d(0%,-10%,0);
+            transition: all 0.5;
+        }
+        .bloco3:hover{
+            transform: translate3d(0%,-10%,0);
+            transition: all 0.5;
+        }
 
+        
     </style>
 </head>
 <body>
@@ -610,8 +640,9 @@
         <p id="mensagemConfirmacao"></p>
         <button onclick="fecharPopup()">Fechar</button>
     </div>
-    <footer class="copy">Copyright<!--©-->&copy; 2024 EducaTec. Todos os direitos reservados.</footer>
-</div>
+    <img src="C:\Users\965155\Downloads\Sem título (1).png" width="100%">
+  
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
@@ -645,6 +676,7 @@
             behavior: 'smooth'
         });
         });
+
     </script>
 </body>
 </html>
