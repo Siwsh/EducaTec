@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://github.com/HerickHannier/EducaTec/blob/main/EducaTec-removebg-preview.png?raw=true" type="image/x-icon">
+    <link rel="stylesheet" href="./css/locomotive-scroll-CSS.css">
     <title>EducaTec</title>
     <style>
         body {
@@ -14,6 +15,7 @@
             flex-direction: column;
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
+            
         }
         .arc-container {
             position: relative;
@@ -514,6 +516,7 @@
         .bloco3:hover{
             transform: perspective(0px) translateY(-10%) scale(100%) translateZ(0);
         }
+
         .bloco1:hover{
             transform: translate3d(0%,-10%,0);
             transition: all 0.5;
@@ -527,13 +530,19 @@
             transition: all 0.5;
         }
 
+        .quadro:hover > :not(:hover){
+            transform:scale(90%);
+            opacity: .4;
+        }
         
+
     </style>
 </head>
 <body>
-    <div>
+
+    <main data-scroll-container>
     <!-- Primeira Página -->
-    <div class="arc-container">
+    <section class="arc-container" data-scroll-section>
         <div class="arc"></div>
         <div class="text-container">
             <div class="col-1">
@@ -561,10 +570,10 @@
         <div class="button-container">
             <a><button class="bn732-hover bn21" id="scrollButton">Saiba Mais</button></a>
         </div>
-    </div>
+    </section>
 
     <!-- Segunda Página -->
-    <div class="segundapagina">
+    <section class="segundapagina" data-scroll-section>
         <div class="imagem-segunda-pagina">
             <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_155217249.png?raw=true" alt="Imagem Segunda Página" width="495" height="493" loading="lazy">
         </div>
@@ -572,16 +581,16 @@
             <h2 class="titulosegundapagina">Sobre Nós</h2>
             <p>Nos últimos anos, a tecnologia <br>tem desempenhado um papel<br> fundamental na transformação<br> da educação, tornando-a mais<br> inclusiva e acessível. O EducaTec <br>é um aplicativo inovador que lidera <br>essa mudança, redefinindo a <br>experiência educacional nas <br>instituições escolares.</p>
         </div>
-    </div>
+    </section>
 
     <!-- Terceira Página -->
-    <div class="terceirapagina">
+    <section class="terceirapagina" data-scroll-section>
         <h2>Inovação</h2>
         <p>O EducaTec utiliza de suas ferramentas inovadoras,<br> com o propósito de mudar o ambiente escolar,<br> capacitando que alunos, educadores e colaboradores<br> possam construir um ambiente escolar<br> verdadeiramente inclusivo.</p>
-    </div>
+    </section>
 
     <!-- Quarta Página -->
-    <div class="quartapagina">
+    <section class="quartapagina" data-scroll-section>
         <div class="texto-quarta-pagina">
             <h2 class="titulosquartapagina">Qual o nosso  propósito?</h2>
             <p>Capacitar os alunos a criar roteiros personalizados para navegar pela escola, garantindo que eles possam explorar o ambiente com confiança.<br> No futuro, a comunidade e o fórum integrados permitirão a troca de experiências e a construção de redes de apoio, promovendo o aprendizado colaborativo.</p>
@@ -592,10 +601,11 @@
         <div class="imagem-quarta-pagina">
             <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-25_131715912.png?raw=true" alt="Imagem Segunda Página" width="600" height="500" loading="lazy">
         </div>
-    </div>
+    </section>
+   
 
 <!--inicio pagina 5-->
-<div class="pagina_5">
+<section class="pagina_5" data-scroll-section>
     <div class="topo">
         <img src="https://github.com/HerickHannier/EducaTec/blob/main/imagem_2024-01-26_140208047.png?raw=true" class="topo" loading="lazy">
     </div>
@@ -616,11 +626,11 @@
                 <br><br>
             </div>
        </div>
-    </div>    
+</section>    
 <!--fim pagina 5-->
 
     <!-- Sexta Página -->
-    <div class="Cadastro">
+    <section class="Cadastro" data-scroll-section>
         <div class="content_1">
             <form onsubmit="mostrarPopup(); return false;">
                 <input type="text" id="Nome" placeholder="Nome"><br>
@@ -633,7 +643,7 @@
             <hr class="hre">
             <p class="cada">Inscreva-se agora para<br> receber as últimas<br> novidades e atualizações<br> sobre o trabalho da<br> EducaTec!</p>
         </div>
-    </div>
+    </section>
     <div class="clear"></div>
 
     <div id="popupCadastro" class="popup-cadastro">
@@ -641,9 +651,9 @@
         <button onclick="fecharPopup()">Fechar</button>
     </div>
     <img src="https://github.com/HerickHannier/EducaTec/blob/main/Sem%20t%C3%ADtulo%20(1).png?raw=true" width="100%">
+</main>
   
-
-    
+    <script src="./js/locomotive-scroll-JS.mim.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
     <script>
@@ -676,7 +686,13 @@
             behavior: 'smooth'
         });
         });
-
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+     <script>
+             const scroll = new LocomotiveScroll({
+                el:document.querySelector('[data-scroll-container]'),
+                smooth: true
+             });
+     </script>
 </body>
 </html>
