@@ -8,6 +8,7 @@
             font-family: Arial, Helvetica, sans-serif;
             
         }
+
         .arc-container {
             position: relative;
             width: 100%;
@@ -592,4 +593,33 @@
           
           a.bn13:hover {
             border-color: rgb(255, 255, 255);
+          }
+
+          /*Efeito Primeria Pagina*/
+          .efeito-logo, .efeito-text-top, .efeito-igm-top, .efeito-botao-top{
+            visibility: hidden;
+          }
+          /*Efeito Segunda Pagina*/
+          .efeito-text-segunda, .efeito-img-segunda{
+            visibility: hidden;
+          }
+          /*Efeito Terceira Pagina*/
+          .efeito-text-terceira{
+            visibility: hidden;
+          }
+          /*Efeito Quarta Pagina*/
+          .efeito-text-quarta,  .efeito-img-quarta{
+            visibility: hidden;
+          }
+          /*Efeito Quinta Pagina*/
+          .efeito-quadrado, .efeito-text-quinta{
+            visibility: hidden;
+          }
+          /*Efeito Sexta Pagina*/
+          .efeito-cadastro{
+            visibility: hidden;
+          }
+          /*Efeito Setima Pagina*/
+          .efeito-img-setima{
+            visibility: hidden;
           }
