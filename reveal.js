@@ -75,12 +75,5 @@ revelar.reveal('.efeito-cadastro',
     duration: 2000, 
     distance:'90px'
 })
-//Setima pagina
-
-revelar.reveal('.efeito-img-setima',
-{
-    duration: 2000, 
-    distance:'0px'
-})
 
 
