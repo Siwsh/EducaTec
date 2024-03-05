@@ -80,7 +80,7 @@ revelar.reveal('.efeito-cadastro',
 revelar.reveal('.efeito-img-setima',
 {
     duration: 2000, 
-    distance:'90px'
+    distance:'0px'
 })
 
 
