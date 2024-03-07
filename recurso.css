@@ -1,12 +1,30 @@
 body {
     margin: 0;
-    background-color: #faf9f9;
-    
+    background-color: #ecebe9;
 }
 
+.arc-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  flex-direction: row;
+  display: grid;
+  height: 90vh;
+}
+
+.arc {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  background-color: #f7f1c4;
+  border-radius: 50%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
 
 .navbar {
-
 overflow: hidden;
 margin-left: 15%;
 margin-right: 15%;
@@ -44,34 +62,14 @@ background-color: #fdfdfd;
 color: black;
 }
 
-
-.letragrande {
-font-size: 48.6px;
-margin: 2;
-color: #c51c1f;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.letrapequena {
-font-size: 21.5px;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-.letra {
-font-size: x-large;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-}
-
 .bn632-hover {
-  width: 160px;
+  width: 170px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
   margin: 20px;
-  height: 40px;
+  height: 50px;
   text-align:center;
   border: none;
   background-size: 300% 100%;
@@ -106,13 +104,38 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .banner{
-  margin-left: 22.3%;
-  margin-top: 3%;
-  width: 55%;
-}
-
-.img{
+  margin-left: 20%;
   margin-top: 2%;
-  margin-left: 33.5%;
-  border: 3px solid rgb(0, 0, 0);
-}
+  width: 59%;
+  position: relative;;
+  border: 1px black ridge;
+  }
+
+  .img{
+    width: 45%;
+    border: 2px solid black;
+    margin: 0% 26%;
+  }
+
+  .letra{
+    font-size: 30px;
+    text-align: left;
+    margin-top: 3%;
+    margin-right: 20%;
+    margin-left: 20%;
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .letra-titulo{
+    font-size: 30px;
+    text-align: left;
+    margin-top: 3%;
+    margin-right: 20%;
+    margin-left: 20%;
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  li{
+
+  }
