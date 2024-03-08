@@ -179,7 +179,7 @@ color: black;
 
    .navbar{
     width: 100%;
-    margin-left: 13%;
+    margin-left: 9%;
    }
 
    .navbar a {
@@ -207,10 +207,21 @@ color: black;
       -webkit-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out;
     }
+
+    .bn632-hover.bn19 {
+      background-image: linear-gradient(
+        to right,
+        #f5ce62,
+        #e43603,
+        #fa7199,
+        #e85a19
+      );
+    }
+
     .banner{
-      margin-left: 20%;
+      margin-left: 7%;
       margin-top: 2%;
-      width: 70%;
+      width: 90%;
       position: relative;;
       border: 1px black ridge;
       }
