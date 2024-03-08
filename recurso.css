@@ -216,12 +216,12 @@ color: black;
         #fa7199,
         #e85a19
       );
+      box-shadow: 0 0px 0px 0 rgba(229, 66, 10, 0.75);
     }
-
     .banner{
-      margin-left: 7%;
+      margin-left: 3%;
       margin-top: 2%;
-      width: 90%;
+      width: 95%;
       position: relative;;
       border: 1px black ridge;
       }
