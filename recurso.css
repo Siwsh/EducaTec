@@ -136,6 +136,83 @@ color: black;
     color: black;
     font-family:Arial, Helvetica, sans-serif;
   }
-  li{
+  .copy{
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    color: white;
+    padding: 0.1% 0%;
+    justify-content:center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0% auto;
+   }
 
+  .logo{
+    width: 111px;
+    height: 111px;
+    margin-top: -8%;
+    margin-left: -5%
   }
+
+  .copyp{
+    margin-top: 0.8%;
+  }
+
+ /* Responsive */
+ @media (min-width: 100px) and ( max-width:767.98px) {
+  body{
+    margin: 0;
+  }
+   .letra{
+    font-size: 20px;
+    text-align: center;
+   }
+
+   .letra-titulo{
+    font-size: 22px;
+   }
+
+   .img{
+    width: 70%;
+    margin-left: 15%;
+   }
+
+   .navbar{
+    width: 100%;
+    margin-left: 13%;
+   }
+
+   .navbar a {
+    display: block;
+    color: #E29028;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    }
+
+    .bn632-hover {
+      width: 150px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 0px;
+      height: 30px;
+      text-align:center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    .banner{
+      margin-left: 20%;
+      margin-top: 2%;
+      width: 70%;
+      position: relative;;
+      border: 1px black ridge;
+      }
+
+ }
