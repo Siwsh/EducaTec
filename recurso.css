@@ -179,14 +179,14 @@ color: black;
 
    .navbar{
     width: 100%;
-    margin-left: 7.5%;
+    margin-left: 9%;
    }
 
    .navbar a {
     display: block;
     color: #E29028;
     text-align: center;
-    padding: 10px 6px;
+    padding: 10px 12px;
     text-decoration: none;
     }
 
@@ -236,14 +236,14 @@ color: black;
 
    .navbar{
     width: 100%;
-    margin-left: 8.5%;
+    margin-left: 9%;
    }
 
    .navbar a {
     display: block;
     color: #E29028;
     text-align: center;
-    padding: 10px 6px;
+    padding: 10px 12px;
     text-decoration: none;
     }
 
