@@ -166,10 +166,14 @@ color: black;
    .letra{
     font-size: 19.5px;
     text-align: left;
+    margin-right: 3%;
+    margin-left: 3%;
    }
 
    .letra-titulo{
-    font-size: 22px;
+    font-size: 22px
+    margin-right: 3%;
+    margin-left: 3%;;
    }
 
    .img{
