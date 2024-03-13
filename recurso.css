@@ -143,6 +143,7 @@ border: 1px black ridge;
 @media (min-width: 100px) and ( max-width:900px) {
 body{
   margin: 0;
+  display: block;
 }
  .letra{
   font-size: 19.5px;
