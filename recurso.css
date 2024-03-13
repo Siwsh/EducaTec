@@ -158,65 +158,7 @@ color: black;
     margin-top: 0.8%;
   }
 
- /* Responsive */
- @media (min-width: 801px) and ( max-width:926px) {
-  body{
-    margin: 0;
-  }
-   .letra{
-    font-size: 20px;
-    text-align: center;
-   }
-
-   .letra-titulo{
-    font-size: 22px;
-   }
-
-   .img{
-    width: 70%;
-    margin-left: 15%;
-   }
-
-   .navbar{
-    width: 100%;
-    margin-left: 9%;
-   }
-
-   .navbar a {
-    display: block;
-    color: #E29028;
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    }
-
-    .bn632-hover {
-      width: 150px;
-      font-size: 11px;
-      height: 30px;
-    }
-
-    .bn632-hover.bn19 {
-      background-image: linear-gradient(
-        to right,
-        #f5ce62,
-        #e43603,
-        #fa7199,
-        #e85a19
-      );
-      box-shadow: 0 0px 0px 0 rgba(229, 66, 10, 0.75);
-    }
-    .banner{
-      margin-left: 3%;
-      margin-top: 2%;
-      width: 95%;
-      position: relative;;
-      border: 1px black ridge;
-      }
-
- }
-
- @media (min-width: 360px) and ( max-width:800px) {
+ @media (min-width: 100px) and ( max-width:767.7px) {
   body{
     margin: 0;
   }
