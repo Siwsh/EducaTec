@@ -36,7 +36,7 @@ function sendEmail() {
   document.getElementById("email").value = "";
 
   document.getElementById("sendEmail").style.display = "block";
-  document.getElementById("mensagemConfirmacao").innerText = `Cadastro feito com sucesso, ${nome}! Verifique o e-mail ${mail} para confirmação.`;
+  document.getElementById("mensagemConfirmacao").innerText = `Cadastro realizado com sucesso, ${nome}! Por favor, verifique o e-mail ${mail} para confirmar sua inscrição. Se não encontrar o e-mail na sua caixa de entrada, por favor, dê uma olhada nas outras pastas, incluindo a de spam. Estamos ansiosos para tê-lo(a) conosco!`;
 
 }
 
