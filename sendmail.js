@@ -3,11 +3,13 @@ document.getElementById('emailButton').addEventListener('click', sendMail);
 function sendMail (e) {
 
     e.preventDefault();
+    alert('test heitor');
 
     const mail = document.getElementById('email').value;
     const name = document.getElementById('nome').value;
 
     if (mail && name) {
+        alert('test 4');
 
         Email.send({
             Host: "smtp.elasticemail.com",
@@ -26,9 +28,11 @@ function sendEmail() {
 
   const mail = document.getElementById('email').value;
   const nome = document.getElementById('nome').value;
+  alert('test 1');
 
   if (nome.trim() === '' || mail.trim() === '') {
       alert('Por favor, preencha todos os campos.');
+      alert('test 2');
       return;
   }
 
